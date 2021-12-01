@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <title>Dominic Witt &#124; Contact me</title>
+        <link rel="shortcut icon" href="webFavicon.png" type="image/x-iconee">
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="css/style.production.css">
+    </head>
+
+    <body>
+        <header class="page-header">
+            <img src="http://via.placeholder.com/200x70" aria-hidden="true" class="page-header_item">
+            <nav class="page-header_item">
+                <!-- Add your logo here -->
+                <ul class="navigation-list" role="menubar">
+                    <li role="presentation">
+                        <a href="index.html" role="menuitem" class="navigation-list_item">Home</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="about.html" role="menuitem" class="navigation-list_item">About me</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="contact.html" role="menuitem" class="navigation-list_item navigation-list_item--active">Contact</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="work.html" role="menuitem" class="navigation-list_item">Work</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="mainCont">
+            <h1>Contact</h1>
+            <div class="contInfo">
+                Tel +1706 512 7493<br>
+                <a href="skype:hello.dominicwitt">Skype</a>
+                <a href="mailTo:domwitt21@gmail.com">domwitt21@gmail.com</a>
+            </div>
+            <a href="mailTo:domwitt21@gmail.com">Contact me</a>
+            <form action="" method="POST" id="contact-form">
+                <label for="email" class="standard-label">E-mail: </label>
+                <input type="email" id="email" required>
+
+                <label for="tele" class="standard-label">Telephone: </label>
+                <input type="tel" id="tele" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
+
+                <label for="message" class="standard-label">Message: </label>
+                <textarea name="message" id="message" cols="30" rows="10" maxlength="240" required></textarea>
+
+                <input type="submit" value="Send Message">
+            </form>
+        </main>
+        <footer class="footer">
+            <p class="footTxt">Find me on</p>
+            <img src="img/upwork.svg" alt="Click to visit my Upwork business page.">
+            <img src="img/linkedin.svg" alt="Click to visit my LinkediIn business page.">
+            <img src="img/facebook.svg" alt="Click to visit my Facebook business page.">
+        </footer>
+        <script src="js/tota11y.min.js"></script>
+    </body>
+</html>

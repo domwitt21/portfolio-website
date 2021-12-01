@@ -2,7 +2,7 @@
 * Prefixed by https://autoprefixer.github.io
 * PostCSS: v8.3.6,
 * Autoprefixer: v10.3.1
-* Browsers: last 4 version
+* Browsers: last 2 version
 */
 
 /*
@@ -16,13 +16,25 @@ Button: #357b70
 */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 /* Declared CSS variables */
+:root {
+    --primary-color: #f9f9f9;
+    --secondary-color: #357b70;
+    --main-background-color: #3d4453;
+    --light-red: #cc6464;
+    --main-font-weight: 700;
+    --grid-item-color: #8a8a8a;
+    --dark-color: #0000004d;
+    --sun-main-color: #edc655;
+    --sun-secondary-color: #fcffad;
+    --sun-alternate-color: #f76414;
+}
 * {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
 }
 body {
-    background-color: #3d4453;
-    color: #f9f9f9;
+    background-color: var(--main-background-color);
+    color: var(--primary-color);
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -30,19 +42,19 @@ body {
 /* Styling for header elements */
 h1 {
     font-size: 30px;
-    font-weight: 700;
+    font-weight: var(--main-font-weight);
 }
 h2 {
     font-size: 24px;
-    font-weight: 700;
+    font-weight: var(--main-font-weight);
 }
 h3 {
     font-size: 18px;
-    font-weight: 700;
+    font-weight: var(--main-font-weight);
 }
 /* Styling for hyperlinks */
 a {
-    color: #f9f9f9;
+    color: var(--primary-color);
 }
 a:visited {
     color: var(lighten(--light-red, 40%));
@@ -51,18 +63,18 @@ a:hover, a:focus {
     text-decoration: none;
 }
 a:active {
-    color: #f9f9f9;
+    color: var(--primary-color);
 }
 /* Styling for button elements */
 button {
     border: none;
     font-family: inherit;
-    background-color: 40%;
-    color: #f9f9f9;
+    background-color: var(darken(--light-red, 40%));
+    color: var(--primary-color);
     text-decoration: none;
     padding: 10px;
     border-radius: 3px;
-    border-bottom: 2px solid #0000004d;
+    border-bottom: 2px solid var(--dark-color);
 }
 button:hover, button:focus {
     cursor: pointer;
@@ -75,21 +87,29 @@ button:hover, button:focus {
     display: inline-block;
     margin-left: 15px;
     -webkit-transition: 2s content;
-    -o-transition: 2s content;
     transition: 2s content;
+    background-color: inherit;
+    padding: 10px;
+    border-radius: 15px;
 }
 .navigation-list_item {
     text-decoration: none;
-}
-.navigation-list_item--active {
-    border: 1px solid #cc6464;
-    padding: 15px;
+    -webkit-transition: border .8s;
+    transition: border .8s;
     border-radius: 15px;
+    padding: 10px;
 }
-.navigation-list li:hover,
-.navigation-list li:focus {
-    -webkit-animation: 4s menubar-animation infinite alternate linear;
-            animation: 4s menubar-animation infinite alternate linear;
+li .navigation-list_item--active {
+    /* ---- Add active tab animation here !IMPORTANT */
+    border-radius: 15px;
+    padding: 10px;
+    border-bottom: 1px solid var(--light-red);
+    -webkit-animation: 4s menubar-animation infinite alternate;
+            animation: 4s menubar-animation infinite alternate;
+}
+.navigation-list_item:hover,
+.navigation-list_item:focus {
+    border: 1px solid var(--light-red);
 }
 .page-header {
     display: -webkit-box;
@@ -147,7 +167,7 @@ button:hover, button:focus {
     padding: 1%;
 }
 .grid_item {
-    background-color: #8a8a8a;
+    background-color: var(--grid-item-color);
     width: auto;
     min-height: auto;
     margin: 0;
@@ -163,32 +183,18 @@ button:hover, button:focus {
     text-align: inherit;
 }
 /* Styles for button elements */
-button {
-    border: none;
-    display: inline-block;
-    font-family: inherit;
-    background-color: #cc6464;
-    color: #f9f9f9;
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 3px;
-    border-bottom: 2px solid #0000004d;
-    -webkit-transition: 0.2s opacity;
-    -o-transition: 0.2s opacity;
-    transition: 0.2s opacity;
-}
+button,
 .button1 {
     border: none;
     display: inline-block;
     font-family: inherit;
-    background-color: #cc6464;
-    color: #f9f9f9;
+    background-color: var(--light-red);
+    color: var(--primary-color);
     text-decoration: none;
     padding: 10px;
     border-radius: 3px;
-    border-bottom: 2px solid #0000004d;
+    border-bottom: 2px solid var(--dark-color);
     -webkit-transition: 0.2s opacity;
-    -o-transition: 0.2s opacity;
     transition: 0.2s opacity;
 }
 button:hover,
@@ -214,24 +220,24 @@ button:focus,
 /* About page house animations */
 @-webkit-keyframes color-change {
     0% {
-        fill: #edc655;
+        fill: var(--sun-main-color);
     }
     50% {
-        fill: #fcffad;
+        fill: var(--sun-secondary-color);
     }
     100% {
-        fill: #f76414;
+        fill: var(--sun-alternate-color);
     }
 }
 @keyframes color-change {
     0% {
-        fill: #edc655;
+        fill: var(--sun-main-color);
     }
     50% {
-        fill: #fcffad;
+        fill: var(--sun-secondary-color);
     }
     100% {
-        fill: #f76414;
+        fill: var(--sun-alternate-color);
     }
 }
 @-webkit-keyframes cloud-move {
@@ -277,22 +283,18 @@ button:focus,
 /* Navigation bar animation */
 @-webkit-keyframes menubar-animation {
     from {
-        -webkit-transform: rotate(0);
-                transform: rotate(0);
+        border-bottom: 1px solid var(--light-red);
     }
     to {
-        -webkit-transform: rotate(1turn);
-                transform: rotate(1turn);
+        border-bottom: 1px solid var(darken(--sun-alternate-color, 20%));
     }
 }
 @keyframes menubar-animation {
     from {
-        -webkit-transform: rotate(0);
-                transform: rotate(0);
+        border-bottom: 1px solid var(--light-red);
     }
     to {
-        -webkit-transform: rotate(1turn);
-                transform: rotate(1turn);
+        border-bottom: 1px solid var(darken(--sun-alternate-color, 20%));
     }
 }
 

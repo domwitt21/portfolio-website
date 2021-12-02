@@ -80,6 +80,7 @@ button:hover, button:focus {
     cursor: pointer;
     opacity: 0.8;
 }
+/* Styling for nav menu */
 .navigation-list {
     list-style-type: none;
 }
@@ -100,7 +101,6 @@ button:hover, button:focus {
     padding: 10px;
 }
 li .navigation-list_item--active {
-    /* ---- Add active tab animation here !IMPORTANT */
     border-radius: 15px;
     padding: 10px;
     border-bottom: 1px solid var(--light-red);
@@ -130,6 +130,16 @@ li .navigation-list_item--active {
             flex-grow: 1;
     text-align: right;
 }
+/* Contact information styles */
+.contact-info a {
+    text-decoration: none;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+.contact-info a:hover,
+.contact-info a:focus {
+    color: var(--light-red);
+}
 /* Contact page form styles */
 .mainCont {
     text-align: center;
@@ -143,29 +153,41 @@ li .navigation-list_item--active {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin: 25px auto 10px auto;
+    margin: 5% auto;
     max-width: 75%;
     text-align: center;
+    background-color: var(--dark-color);
+    border-radius: 15px;
 }
 input[type="email"] {
-    width: 50%;
-    margin: 0 auto;
+    width: 25%;
+    margin: 10px auto;
     border-radius: 10px;
 }
 input[type="tel"] {
-    width: 50%;
-    margin: 0 auto;
+    width: 25%;
+    margin: 10px auto;
     border-radius: 10px;
 }
 textarea[name="message"] {
-    width: 50%;
-    margin: 0 auto;
+    width: 35%;
+    margin: 10px auto;
     border-radius: 10px;
 }
 input[type="submit"] {
-    width: 25%;
+    width: 10%;
+    padding: 5px 10px 5px 10px;
     margin: 15px auto 150px auto;
     border-radius: 10px;
+    background-color: var(--secondary-color);
+    border: none;
+    -webkit-transition: all .5s ease-out;
+    transition: all .5s ease-out;
+}
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+    cursor: pointer;
+    background-color: var(--light-red);
 }
 /* Homepage button styles */
 .contact-btn-index {
@@ -261,12 +283,37 @@ input[type="submit"] {
     padding: 2%;
     border-radius: 15px;
 }
-.interests-list[role="list"] {
+/* Interest list styles on about page */
+.interests-list {
     list-style-type: none;
+    margin: 5% 0 5% 0;
+    line-height: 25px;
 }
+.interests-list_item:first-child:after {
+    content: " 💻";
+}
+.interests-list_item:nth-child(2):after {
+    content: " 📈";
+}
+.interests-list_item:nth-child(3):after {
+    content: " 🎸";
+}
+.interests-list_item:nth-child(4):after {
+    content: " 🧠";
+}
+/* Skills table styles on about page */
 .skills-table {
     margin: 20px auto 20px auto;
     text-align: inherit;
+    margin: 5% auto;
+    line-height: 25px;
+    letter-spacing: 1px;
+    background-color: var(--light-red);
+    padding: 5%;
+    border-radius: 15px;
+}
+.table-row {
+    border-bottom: 1px solid black;
 }
 /* Styles for button elements */
 button,

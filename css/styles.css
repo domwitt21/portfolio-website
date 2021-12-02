@@ -49,7 +49,7 @@ a {
     color: var(--primary-color);
 }
 a:visited {
-    color: var(lighten(--light-red, 40%));
+    color: var(--primary-color);
 }
 a:hover, a:focus {
     text-decoration: none;
@@ -61,7 +61,7 @@ a:active {
 button {
     border: none;
     font-family: inherit;
-    background-color: var(darken(--light-red, 40%));
+    background-color: var(--light-red);
     color: var(--primary-color);
     text-decoration: none;
     padding: 10px;
@@ -104,6 +104,7 @@ li .navigation-list_item--active {
     display: flex;
     width: 100%;
     padding: 20px;
+    background-color: var(--dark-color);
 }
 .page-header_item {
     flex: 0 1 200px;
@@ -112,7 +113,66 @@ li .navigation-list_item--active {
     flex-grow: 1;
     text-align: right;
 }
-/* Style for portrait image in HTML body */
+/* Contact page form styles */
+.mainCont {
+    text-align: center;
+    line-height: 30px;
+}
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    margin: 25px auto 10px auto;
+    max-width: 75%;
+    text-align: center;
+}
+input[type="email"] {
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+input[type="tel"] {
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+textarea[name="message"] {
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+input[type="submit"] {
+    width: 25%;
+    margin: 15px auto 150px auto;
+    border-radius: 10px;
+}
+/* Homepage button styles */
+.contact-btn-index {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    margin: 0 0 1% 1%;
+    background-color: var(--light-red);
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 15px;
+    transition: background-color .5s linear;
+}
+.contact-btn-index:hover,
+.contact-btn-index:focus {
+    background-color: var(--secondary-color);
+}
+.contact-btn-index-secondary {
+    background-color: var(--secondary-color);
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 15px;
+    transition: background-color .5s linear;
+}
+.contact-btn-index-secondary:hover,
+.contact-btn-index-secondary:focus {
+    background-color: var(--light-red);
+}
+/* Style for HTML body */
 .profile_portrait {
     float: left;
     width: 100%;
@@ -125,14 +185,26 @@ li .navigation-list_item--active {
 }
 .profile {
     max-width: 700px;
-    margin: 0 auto;
+    margin: 5% auto;
     text-align: center;
+    line-height: 25px;
 }
 /* Styles for footer */
 .page-footer {
     clear: both;
+    text-align: center;
+    background-color: var(--dark-color);
+    max-width: 100%;
+    padding: 1%;
+    margin-top: 10%;
+}
+.copyright-text {
+    font-size: 10px;
+}
+.social-media {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
     text-align: center;
 }
 /* Styles for grid layout */
@@ -150,6 +222,11 @@ li .navigation-list_item--active {
 }
 .main-content {
     text-align: center;
+    margin: 15% auto;
+    background-color: var(--dark-color);
+    width: 75%;
+    padding: 2%;
+    border-radius: 15px;
 }
 .interests-list[role="list"] {
     list-style-type: none;
@@ -223,7 +300,7 @@ button:focus,
         border-bottom: 1px solid var(--light-red);
     }
     to {
-        border-bottom: 1px solid var(darken(--sun-alternate-color, 20%));
+        border-bottom: 1px solid var(--sun-alternate-color);
     }
 }
 

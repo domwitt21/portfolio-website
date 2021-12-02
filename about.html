@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en-US">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="utf-8">
@@ -12,7 +12,7 @@
 
     <body>
         <header class="page-header">
-            <img src="http://via.placeholder.com/200x70" aria-hidden="true" class="page-header_item">
+            <img src="img/main-logo.png" aria-hidden="true" class="page-header_item" alt="Main webpage logo">
             <nav class="page-header_item">
                 <!-- Add your logo here -->
                 <ul class="navigation-list" role="menubar">
@@ -36,13 +36,13 @@
             <h1>Hello, my name is Dominic!</h1>
             <p>
                 I am a Full-stack web developer with a passion for innovation. I enjoy:
-                <ul class="interests-list" role="list">
-                    <li class="interests-list_item" role="listitem">Front-end Development</li>
-                    <li class="interests-list_item" role="listitem">Back-end Development</li>
-                    <li class="interests-list_item" role="listitem">Playing guitar</li>
-                    <li class="interests-list_item" role="listitem">Learning new things</li>
-                </ul>
             </p>
+                <ul class="interests-list">
+                    <li class="interests-list_item">Front-end Development</li>
+                    <li class="interests-list_item">Back-end Development</li>
+                    <li class="interests-list_item">Playing guitar</li>
+                    <li class="interests-list_item">Learning new things</li>
+                </ul>
             <a href="#" class="button1" download aria-hidden="true">Download my CV!</a>
             <svg id="about-picture" xmlns="http://www.w3.org/2000/svg" class="berlin-illustration" height="auto"
                 viewBox="0 0 700 505" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -1392,12 +1392,17 @@
                 </tbody>
             </table>
         </main>
-        <footer class="footer">
+        <footer class="page-footer">
             <p class="footTxt">Find me on</p>
-            <img src="img/upwork.svg" alt="Click to visit my Upwork business page.">
-            <img src="img/linkedin.svg" alt="Click to visit my LinkediIn business page.">
-            <img src="img/facebook.svg" alt="Click to visit my Facebook business page.">
+            <div class="social-media">
+                <a href="https://www.upwork.com/freelancers/~01145e8f93096024ca" target="_blank"><img src="img/upwork.svg"
+                        alt="Click to visit my Upwork business page."></a>
+                <a href="https://www.linkedin.com/in/domwitt21/" target="_blank"><img src="img/linkedin.svg"
+                        alt="Click to visit my LinkediIn business page."></a>
+                <a href="https://www.facebook.com/dominicwitt" target="_blank"><img src="img/facebook.svg"
+                        alt="Click to visit my Facebook business page."></a>
+            </div>
+            <p class="copyright-text">&copy;2021 Copyright - Dominic Witt</p>
         </footer>
-        <script src="js/tota11y.min.js"></script>
     </body>
 </html>

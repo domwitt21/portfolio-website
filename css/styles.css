@@ -20,6 +20,7 @@ Button: #357b70
     --sun-main-color: #edc655;
     --sun-secondary-color: #fcffad;
     --sun-alternate-color: #f76414;
+    --footer-image-filter: invert(100%) sepia(3%) saturate(122%) hue-rotate(335deg) brightness(111%) contrast(95%);
 }
 * {
     box-sizing: border-box;
@@ -102,7 +103,7 @@ li .navigation-list_item--active {
 }
 .page-header {
     display: flex;
-    width: 100%;
+    max-width: 100%;
     padding: 20px;
     background-color: var(--dark-color);
 }
@@ -227,10 +228,20 @@ input[type="submit"]:focus {
     justify-content: center;
     text-align: center;
 }
+.upwork-logo {
+    filter: var(--footer-image-filter);
+}
+.linkedin-logo {
+    filter: var(--footer-image-filter);
+}
+.facebook-logo {
+    filter: var(--footer-image-filter);
+}
 /* Styles for grid layout */
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-gap: 20px;
     padding: 1%;
 }
@@ -239,6 +250,19 @@ input[type="submit"]:focus {
     width: auto;
     min-height: auto;
     margin: 0;
+    padding: 5%;
+    border-radius: 15px;
+}
+.grid_item a {
+    text-decoration: none;
+    background-color: var(--light-red);
+    padding: 2% 4% 2% 4%;
+    border-radius: 15px;
+    transition: background-color .5s linear;
+}
+.grid_item a:hover,
+.grid_item a:focus {
+    background-color: var(--secondary-color);
 }
 .main-content {
     text-align: center;
@@ -268,14 +292,15 @@ input[type="submit"]:focus {
 }
 /* Skills table styles on about page */
 .skills-table {
-    margin: 20px auto 20px auto;
-    text-align: inherit;
+    margin: 20px auto;
+    text-align: center;
     margin: 5% auto;
     line-height: 25px;
     letter-spacing: 1px;
     background-color: var(--light-red);
     padding: 5%;
     border-radius: 15px;
+    max-width: 50%;
 }
 .table-row {
     border-bottom: 1px solid black;
@@ -360,6 +385,29 @@ button:focus,
 }
 
 /* Media queries */
+@media all and (max-width: 320px) {
+    .page-header {
+        top: 0;
+        max-width: 100%;
+        text-align: center;
+        padding: 20px;
+        background-color: var(--dark-color);
+    }
+    .header-item {
+        max-width: 45%;
+        position: relative;
+    }
+    .navigation-list {
+        display: flex;
+        flex-direction: row;
+        max-width: 50%;
+    }
+}
+@media all and (max-width: 518px) {
+    .skills-table {
+        display: none;
+    }
+}
 @media all and (max-width: 500px) {
     .grid {
         grid-template-columns: 1fr;

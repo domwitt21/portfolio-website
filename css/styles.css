@@ -305,6 +305,18 @@ input[type="submit"]:focus {
 .table-row {
     border-bottom: 1px solid black;
 }
+.progress-bar-html {
+    background: linear-gradient(to right, var(--dark-color) 100%, var(--light-red) 5%);
+}
+.progress-bar-css {
+    background: linear-gradient(to right, var(--dark-color) 97%, var(--light-red) 5%);
+}
+.progress-bar-javascript {
+    background: linear-gradient(to right, var(--dark-color) 50%, var(--light-red) 50%);
+}
+.progress-bar-scss {
+    background: linear-gradient(to right, var(--dark-color) 65%, var(--light-red) 50%);
+}
 /* Styles for button elements */
 button,
 .button1 {

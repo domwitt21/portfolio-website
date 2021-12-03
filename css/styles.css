@@ -120,8 +120,25 @@ li .navigation-list_item--active {
     transition: all .5s ease-in-out;
 }
 .contact-info a:hover,
-.contact-info a:focus {
+.contact-info a:focus,
+.contact-info a:nth-child(1):hover::before,
+.contact-info a:nth-child(1):focus::before {
     color: var(--light-red);
+    content: "📱";
+}
+.contact-info a:hover,
+.contact-info a:focus,
+.contact-info a:nth-child(3):hover::before,
+.contact-info a:nth-child(3):focus::before {
+    color: var(--light-red);
+    content: "⌨️";
+}
+.contact-info a:hover,
+.contact-info a:focus,
+.contact-info a:nth-child(5):hover::before,
+.contact-info a:nth-child(5):focus::before {
+    color: var(--light-red);
+    content: "📧";
 }
 /* Contact page form styles */
 .mainCont {
@@ -136,6 +153,7 @@ li .navigation-list_item--active {
     text-align: center;
     background-color: var(--dark-color);
     border-radius: 15px;
+    padding: 2%;
 }
 input[type="email"] {
     width: 25%;
@@ -153,11 +171,12 @@ textarea[name="message"] {
     border-radius: 10px;
 }
 input[type="submit"] {
-    width: 10%;
+    width: 150px;
     padding: 5px 10px 5px 10px;
-    margin: 15px auto 150px auto;
+    margin: 0 auto;
     border-radius: 10px;
     background-color: var(--secondary-color);
+    color: var(--primary-color);
     border: none;
     transition: all .5s ease-out;
 }
@@ -295,7 +314,7 @@ input[type="submit"]:focus {
     margin: 20px auto;
     text-align: center;
     margin: 5% auto;
-    line-height: 25px;
+    line-height: 30px;
     letter-spacing: 1px;
     background-color: var(--light-red);
     padding: 5%;

@@ -27,6 +27,7 @@ Button: #357b70
     --sun-main-color: #edc655;
     --sun-secondary-color: #fcffad;
     --sun-alternate-color: #f76414;
+    --footer-image-filter: invert(100%) sepia(3%) saturate(122%) hue-rotate(335deg) brightness(111%) contrast(95%);
 }
 * {
     -webkit-box-sizing: border-box;
@@ -115,7 +116,7 @@ li .navigation-list_item--active {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 100%;
+    max-width: 100%;
     padding: 20px;
     background-color: var(--dark-color);
 }
@@ -137,8 +138,25 @@ li .navigation-list_item--active {
     transition: all .5s ease-in-out;
 }
 .contact-info a:hover,
-.contact-info a:focus {
+.contact-info a:focus,
+.contact-info a:nth-child(1):hover::before,
+.contact-info a:nth-child(1):focus::before {
     color: var(--light-red);
+    content: "📱";
+}
+.contact-info a:hover,
+.contact-info a:focus,
+.contact-info a:nth-child(3):hover::before,
+.contact-info a:nth-child(3):focus::before {
+    color: var(--light-red);
+    content: "⌨️";
+}
+.contact-info a:hover,
+.contact-info a:focus,
+.contact-info a:nth-child(5):hover::before,
+.contact-info a:nth-child(5):focus::before {
+    color: var(--light-red);
+    content: "📧";
 }
 /* Contact page form styles */
 .mainCont {
@@ -158,6 +176,7 @@ li .navigation-list_item--active {
     text-align: center;
     background-color: var(--dark-color);
     border-radius: 15px;
+    padding: 2%;
 }
 input[type="email"] {
     width: 25%;
@@ -175,11 +194,12 @@ textarea[name="message"] {
     border-radius: 10px;
 }
 input[type="submit"] {
-    width: 10%;
+    width: 150px;
     padding: 5px 10px 5px 10px;
-    margin: 15px auto 150px auto;
+    margin: 0 auto;
     border-radius: 10px;
     background-color: var(--secondary-color);
+    color: var(--primary-color);
     border: none;
     -webkit-transition: all .5s ease-out;
     transition: all .5s ease-out;
@@ -260,20 +280,72 @@ input[type="submit"]:focus {
             justify-content: center;
     text-align: center;
 }
+.upwork-logo {
+    -webkit-filter: var(--footer-image-filter);
+            filter: var(--footer-image-filter);
+}
+.linkedin-logo {
+    -webkit-filter: var(--footer-image-filter);
+            filter: var(--footer-image-filter);
+}
+.facebook-logo {
+    -webkit-filter: var(--footer-image-filter);
+            filter: var(--footer-image-filter);
+}
 /* Styles for grid layout */
 .grid {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
     grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 20px 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-gap: 20px;
     padding: 1%;
+}
+.grid > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+}
+.grid > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+}
+.grid > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+}
+.grid > *:nth-child(4) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+}
+.grid > *:nth-child(5) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+}
+.grid > *:nth-child(6) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 5;
 }
 .grid_item {
     background-color: var(--grid-item-color);
     width: auto;
     min-height: auto;
     margin: 0;
+    padding: 5%;
+    border-radius: 15px;
+}
+.grid_item a {
+    text-decoration: none;
+    background-color: var(--light-red);
+    padding: 2% 4% 2% 4%;
+    border-radius: 15px;
+    -webkit-transition: background-color .5s linear;
+    transition: background-color .5s linear;
+}
+.grid_item a:hover,
+.grid_item a:focus {
+    background-color: var(--secondary-color);
 }
 .main-content {
     text-align: center;
@@ -303,17 +375,34 @@ input[type="submit"]:focus {
 }
 /* Skills table styles on about page */
 .skills-table {
-    margin: 20px auto 20px auto;
-    text-align: inherit;
+    margin: 20px auto;
+    text-align: center;
     margin: 5% auto;
-    line-height: 25px;
+    line-height: 30px;
     letter-spacing: 1px;
     background-color: var(--light-red);
     padding: 5%;
     border-radius: 15px;
+    max-width: 50%;
 }
 .table-row {
     border-bottom: 1px solid black;
+}
+.progress-bar-html {
+    background: -webkit-gradient(linear, left top, right top, color-stop(100%, var(--dark-color)), color-stop(5%, var(--light-red)));
+    background: linear-gradient(to right, var(--dark-color) 100%, var(--light-red) 5%);
+}
+.progress-bar-css {
+    background: -webkit-gradient(linear, left top, right top, color-stop(97%, var(--dark-color)), color-stop(5%, var(--light-red)));
+    background: linear-gradient(to right, var(--dark-color) 97%, var(--light-red) 5%);
+}
+.progress-bar-javascript {
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%, var(--dark-color)), color-stop(50%, var(--light-red)));
+    background: linear-gradient(to right, var(--dark-color) 50%, var(--light-red) 50%);
+}
+.progress-bar-scss {
+    background: -webkit-gradient(linear, left top, right top, color-stop(65%, var(--dark-color)), color-stop(50%, var(--light-red)));
+    background: linear-gradient(to right, var(--dark-color) 65%, var(--light-red) 50%);
 }
 /* Styles for button elements */
 button,
@@ -444,6 +533,34 @@ button:focus,
 }
 
 /* Media queries */
+@media all and (max-width: 320px) {
+    .page-header {
+        top: 0;
+        max-width: 100%;
+        text-align: center;
+        padding: 20px;
+        background-color: var(--dark-color);
+    }
+    .header-item {
+        max-width: 45%;
+        position: relative;
+    }
+    .navigation-list {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        max-width: 50%;
+    }
+}
+@media all and (max-width: 518px) {
+    .skills-table {
+        display: none;
+    }
+}
 @media all and (max-width: 500px) {
     .grid {
         -ms-grid-columns: 1fr;

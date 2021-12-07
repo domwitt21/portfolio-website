@@ -533,30 +533,71 @@ button:focus,
 }
 
 /* Media queries */
-@media all and (max-width: 320px) {
+@media all and (min-width: 319px) and (max-width: 380px) {
     .page-header {
         top: 0;
         max-width: 100%;
+        margin: 0;
         text-align: center;
         padding: 20px;
         background-color: var(--dark-color);
     }
-    .header-item {
-        max-width: 45%;
-        position: relative;
+    .page-header_item {
+        display: block;
+        text-align: center;
+        max-width: 100px;
     }
     .navigation-list {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        -webkit-box-orient: horizontal;
+        -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row;
-        max-width: 50%;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+    .navigation-list li {
+        position: relative;
+        margin: 0;
+        max-width: 105px;
+    }
+    .navigation-list_item {
+        display: block;
+        font-size: 10px;
+    }
+    input[type="email"] {
+        width: 75%;
+    }
+    input[type="tel"] {
+        width: 75%;
+    }
+    textarea[name="message"] {
+        width: 75%;
+    }
+    .header-item {
+        margin: 0;
+        max-width: 100%;
+    }
+    .profile {
+        margin: 25% auto;
+        text-align: center;
+        line-height: 25px;
+    }
+    .grid {
+        grid-gap: 20px;
+        padding: 1%;
+    }
+    .grid_item {
+        margin: 5px;
+        padding: 10%;
+    }
+    .grid_item a {
+        padding: 2% 5% 2% 5%;
+        width: 15px;
+        font-size: 12px;
     }
 }
-@media all and (max-width: 518px) {
+@media all and (max-width: 511px) {
     .skills-table {
         display: none;
     }
@@ -581,5 +622,13 @@ button:focus,
         grid-column: auto / auto;
         grid-row: auto / auto;
         font-size: 22px;
+    }
+}
+@media all and (min-width: 700px) and (max-width: 1200px) {
+    .contact-btn-index-secondary {
+        max-width: 350px;
+    }
+    .profile {
+        margin: 15% auto;
     }
 }

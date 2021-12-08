@@ -522,3 +522,8 @@ button:focus,
         margin: 15% auto;
     }
 }
+@media all and (max-width: 4000px) {
+    .mobile-header_item {
+        display: none;
+    }
+}

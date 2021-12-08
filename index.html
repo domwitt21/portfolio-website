@@ -8,7 +8,7 @@
         <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="img/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" type="text/css" href="css/normalize.css">
-        <link rel="stylesheet" type="text/css" href="css/style.production.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
     </head>
 
     <body>
@@ -17,7 +17,6 @@
                 <img src="img/main-logo.png" aria-hidden="true" class="page-header_item header-item" alt="Main page logo">
             </a>
             <nav class="page-header_item">
-                <!-- Add your logo here -->
                 <ul class="navigation-list" role="menubar">
                     <li role="presentation">
                         <a href="index.html" role="menuitem" class="navigation-list_item navigation-list_item--active">Home</a>
@@ -33,10 +32,31 @@
                     </li>
                 </ul>
             </nav>
-            <!-- Mobile nav menu HTML here -->
-            
         </header>
         <main class="main-content">
+            <div class="mobile-header_item">
+                <div class="mobile-button" id="mobile-menu">
+                    <span class="dark-line"></span>
+                    <span class="dark-line"></span>
+                    <span class="dark-line"></span>
+                </div>
+                <div class="mobile-list_container">
+                    <ul class="mobile-navigation-list" id="mobile-menu-list">
+                        <li role="presentation">
+                            <a href="index.html" role="menuitem" class="mobile-list_item mobile-list_item--active">Home</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="about.html" role="menuitem" class="mobile-list_item">About me</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="work.html" role="menuitem" class="mobile-list_item">Work</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="contact.html" role="menuitem" class="mobile-list_item">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
             <section class="profile">
                 <h1>
                     <img src="img/dominic-portrait.png" class="profile_portrait" alt="A personal photograph of Dominic Witt.">
@@ -60,5 +80,6 @@
             <a href="contact.html" class="contact-btn-index" target="_blank">Contact me here</a>
             <p class="copyright-text">&copy;2021 Copyright - Dominic Witt</p>
         </footer>
+        <script src="js/testMobile.js"></script>
     </body>
 </html>

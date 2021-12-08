@@ -8,7 +8,7 @@
         <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="img/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" type="text/css" href="css/normalize.css">
-        <link rel="stylesheet" type="text/css" href="css/style.production.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
     </head>
 
     <body>
@@ -35,6 +35,29 @@
             </nav>
         </header>
         <main class="mainCont">
+            <div class="mobile-header_item">
+                <div class="mobile-button" id="mobile-menu">
+                    <span class="dark-line"></span>
+                    <span class="dark-line"></span>
+                    <span class="dark-line"></span>
+                </div>
+                <div class="mobile-list_container">
+                    <ul class="mobile-navigation-list" id="mobile-menu-list">
+                        <li role="presentation">
+                            <a href="index.html" role="menuitem" class="mobile-list_item">Home</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="about.html" role="menuitem" class="mobile-list_item">About me</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="work.html" role="menuitem" class="mobile-list_item">Work</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="contact.html" role="menuitem" class="mobile-list_item mobile-list_item--active">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
             <h1>Contact</h1>
             <div class="contact-info">
                 <a href="tel:7065127493">+1706&#45;512&#45;7493</a>
@@ -68,5 +91,6 @@
             </div>
             <p class="copyright-text">&copy;2021 Copyright - Dominic Witt</p>
         </footer>
+        <script src="js/testMobile.js"></script>
     </body>
 </html>
